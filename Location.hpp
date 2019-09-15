@@ -22,6 +22,7 @@ protected:
 
 public:
 	Location();
+	virtual string getName();
 	void setNorth(Location *);
 	void setEast(Location *);
 	void setSouth(Location *);
@@ -32,6 +33,7 @@ public:
 class Hillsborad :
 	public Location
 {
+public:
 	Hillsborad();
 	~Hillsborad();
 };
@@ -39,6 +41,7 @@ class Hillsborad :
 class Ashenvale :
 	public Location
 {
+public:
 	Ashenvale();
 	~Ashenvale();
 };
@@ -46,6 +49,7 @@ class Ashenvale :
 class Desolace :
 	public Location
 {
+public:
 	Desolace();
 	~Desolace();
 };
@@ -53,20 +57,23 @@ class Desolace :
 class Stonetalon :
 	public Location
 {
+public:
 	Stonetalon();
 	~Stonetalon();
 };
 
-class TheBarrens :
+class Barrens :
 	public Location
 {
-	TheBarrens();
-	~TheBarrens();
+public:
+	Barrens();
+	~Barrens();
 };
 
 class Swamp :
 	public Location
 {
+public:
 	Swamp();
 	~Swamp();
 };
@@ -74,6 +81,7 @@ class Swamp :
 class Plaguelands :
 	public Location
 {
+public:
 	Plaguelands();
 	~Plaguelands();
 };
@@ -81,6 +89,7 @@ class Plaguelands :
 class Stranglethorn :
 	public Location
 {
+public:
 	Stranglethorn();
 	~Stranglethorn();
 };
@@ -88,6 +97,7 @@ class Stranglethorn :
 class Wetlands :
 	public Location
 {
+public:
 	Wetlands();
 	~Wetlands();
 };

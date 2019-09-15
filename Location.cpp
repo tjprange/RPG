@@ -6,40 +6,92 @@ This is the function implementation file for the Location and it's subclasses.
 
 Location::Location() {}
 
+string Location::getName()
+{
+	return this->name;
+}
+
+void Location::setNorth(Location *location)
+{
+	this->north = location;
+}
+
+void Location::setEast(Location *location)
+{
+	this->east = location;
+}
+
+void Location::setSouth(Location *location)
+{
+	this->south = location;
+}
+
+void Location::setWest(Location *location)
+{
+	this->west = location;
+}
+
 Location::~Location() {}
 
-Hillsborad::Hillsborad() {}
+Hillsborad::Hillsborad() 
+{
+	this->name = "Hillsborad Foothills";
+}
 
 Hillsborad::~Hillsborad() {};
 
-TheBarrens::TheBarrens() {}
+Barrens::Barrens()
+{
+	this->name = "The Barrens";
+}
 
-TheBarrens::~TheBarrens() {}
+Barrens::~Barrens() {}
 
-Ashenvale::Ashenvale() {}
+Ashenvale::Ashenvale() 
+{
+	this->name = "Ashenvale";
+}
 
 Ashenvale::~Ashenvale() {}
 
-Desolace::Desolace() {}
+Desolace::Desolace() 
+{
+	this->name = "Desolace";
+}
 
 Desolace::~Desolace() {}
 
-Stonetalon::Stonetalon() {}
+Stonetalon::Stonetalon() 
+{
+	this->name = "Stonetalon Mountains";
+}
 
 Stonetalon::~Stonetalon() {}
 
-Swamp::Swamp() {}
+Swamp::Swamp() 
+{
+	this->name = "The Swamp of Sorrows";
+}
 
 Swamp::~Swamp() {}
 
-Plaguelands::Plaguelands() {}
+Plaguelands::Plaguelands() 
+{
+	this->name = "The Plaguelands";
+}
 
 Plaguelands::~Plaguelands() {}
 
-Stranglethorn::Stranglethorn() {}
+Stranglethorn::Stranglethorn() 
+{
+	this->name = "Stranglethorn Vale";
+}
 
 Stranglethorn::~Stranglethorn() {}
 
-Wetlands::Wetlands() {}
+Wetlands::Wetlands() 
+{
+	this->name = "The Wetlands";
+}
 
 Wetlands::~Wetlands() {}
