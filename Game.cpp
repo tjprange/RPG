@@ -5,7 +5,7 @@ This is the function implementation for the Game class.
 #include "Game.hpp"
 
 
-/* The Game constructor will dynamically allocates each location which and links them together. */
+/* The Game constructor will dynamically allocate each location and links them together. */
 Game::Game()
 {
 	hillsborad = new Hillsborad;
