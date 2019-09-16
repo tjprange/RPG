@@ -21,6 +21,13 @@ private:
 	Location *plaguelands;
 	Location *stranglethorn;
 	Location *wetlands;
+	Location *current;
+	void gameOperations();
+	void moveNorth();
+	void moveEast();
+	void moveSouth();
+	void moveWest();
+	void displayLocation();
 public:
 	Game();
 	~Game();

@@ -71,9 +71,50 @@ Game::Game()
 	wetlands->setEast(plaguelands);
 	wetlands->setSouth(desolace);
 	wetlands->setWest(stranglethorn);
+
+	//Current location is Stranglethorn
+	current = stranglethorn;
+
+	gameOperations();
 }
 
+/* This is the game loop that will control the operations of the game */
+void Game::gameOperations()
+{
+	
+}
 
+/* This function will return the name of the current location */
+void Game::displayLocation()
+{
+	cout << current->getName();
+}
+
+/* Shifts the current location to the it's north pointer */
+void Game::moveNorth()
+{
+	current = current->getNorth();
+}
+
+/* Shifts the current location to the it's east pointer */
+void Game::moveEast()
+{
+	current = current->getEast();
+}
+
+/* Shifts the current location to the it's south pointer */
+void Game::moveSouth()
+{
+	current = current->getSouth();
+}
+
+/* Shifts the current location to the it's west pointer */
+void Game::moveWest()
+{
+	current = current->getWest();
+}
+
+/* The game destructor will free any allocated memory. */
 Game::~Game()
 {
 	delete hillsborad;

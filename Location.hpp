@@ -11,10 +11,13 @@ using std::cout;
 using std::endl;
 using std::string;
 
+/* The location class serves as the base class for each of the preceeding base classes. It holds pointers to four additional locations which
+will be used to link them together in a "world" like map. */
 class Location
 {
 protected:
 	string name;
+	string description;
 	Location *north = NULL;
 	Location *east = NULL;
 	Location *south = NULL;
@@ -23,10 +26,15 @@ protected:
 public:
 	Location();
 	virtual string getName();
+	virtual string getDescription();
 	void setNorth(Location *);
 	void setEast(Location *);
 	void setSouth(Location *);
 	void setWest(Location *);
+	virtual Location * getNorth();
+	virtual Location * getEast();
+	virtual Location * getSouth();
+	virtual Location * getWest();
 	virtual ~Location();
 };
 
