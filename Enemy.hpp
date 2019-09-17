@@ -1,5 +1,5 @@
 /*
-This is the definition file for the Enemy class and subclasses thereof 
+Enemy.hpp is the Enemy class specification file and subclasses thereof.
 */
 
 #ifndef ENEMY_HPP
@@ -8,7 +8,7 @@ This is the definition file for the Enemy class and subclasses thereof
 
 using std::string;
 
-/* Emeny class is the abstract base class for the derived subclasses */
+/* Ememy class is the abstract base class for the derived subclasses */
 class Enemy
 {
 protected:
@@ -79,7 +79,7 @@ class Barbarian :
 	public Enemy
 {
 public:
-	Barbarian();
+	Barbarian();	
 	~Barbarian();
 };
 
@@ -98,6 +98,15 @@ class Jaguar :
 public:
 	Jaguar();
 	~Jaguar();
+};
+
+/* Basilisk class definition */
+class Basilisk :
+	public Enemy
+{
+public:
+	Basilisk();
+	~Basilisk();
 };
 
 #endif

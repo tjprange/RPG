@@ -8,6 +8,7 @@ This is the class definition file for Game. This class will control the flow of 
 #define GAME_HPP
 #include <iostream>
 #include "Location.hpp"
+#include "Player.hpp"
 
 class Game
 {
@@ -22,6 +23,7 @@ private:
 	Location *stranglethorn;
 	Location *wetlands;
 	Location *current;
+	Player *player;
 	void gameOperations();
 	void moveNorth();
 	void moveEast();
