@@ -1,11 +1,16 @@
 /*
-Enemy.hpp is the Enemy class specification file and subclasses thereof.
+Enemy.hpp is the Enemy class specification file and subclasses thereof. Enemy is a abstract base class. 
 */
 
 #ifndef ENEMY_HPP
 #define ENEMY_HPP
+#include <iostream>
 #include <string>
+#include <cstdlib>
+#include <ctime>
 
+using std::cout;
+using std::endl;
 using std::string;
 
 /* Ememy class is the abstract base class for the derived subclasses */
@@ -14,9 +19,15 @@ class Enemy
 protected:
 	string name;
 	int hits;
-	int attack;
+	int atk;
+	int attackDamage(int);
+	void checkSlain();
 public:
 	Enemy();
+	virtual int attack();
+	virtual void defense(int);
+	int getHits();
+	string getName();
 	virtual ~Enemy();
 };
 
@@ -87,6 +98,7 @@ public:
 class Crocodile :
 	public Enemy
 {
+public:
 	Crocodile();
 	~Crocodile();
 };

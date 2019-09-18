@@ -9,6 +9,10 @@ This is the class definition file for Game. This class will control the flow of 
 #include <iostream>
 #include "Location.hpp"
 #include "Player.hpp"
+#include "Enemy.hpp"
+
+using std::cout;
+using std::endl;
 
 class Game
 {
@@ -23,6 +27,7 @@ private:
 	Location *stranglethorn;
 	Location *wetlands;
 	Location *current;
+	Enemy *enemy;
 	Player *player;
 	void gameOperations();
 	void moveNorth();
@@ -30,6 +35,8 @@ private:
 	void moveSouth();
 	void moveWest();
 	void displayLocation();
+	void duel(Player *, Enemy *);
+	Enemy * generateEnemy();
 public:
 	Game();
 	~Game();
