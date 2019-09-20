@@ -8,7 +8,7 @@ This is the function implementation file for the player class
 /* Constructor for the Player class */
 Player::Player()
 {
-	this->hits = 100;
+	this->hits = 5;
 	this->atk = 2;
 }
 
@@ -27,6 +27,7 @@ void Player::defense(int damage)
 	checkSlain();
 }
 
+/* Function will print a message if the player's hits drop <= 0*/
 void Player::checkSlain()
 {
 	if (this->hits <= 0) {

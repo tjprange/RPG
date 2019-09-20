@@ -10,6 +10,7 @@ This is the class definition file for Game. This class will control the flow of 
 #include "Location.hpp"
 #include "Player.hpp"
 #include "Enemy.hpp"
+#include "validation.hpp"
 
 using std::cout;
 using std::endl;
@@ -17,6 +18,7 @@ using std::endl;
 class Game
 {
 private:
+	int userChoice;
 	Location *hillsborad;
 	Location *ashenvale;
 	Location *desolace;
@@ -36,6 +38,8 @@ private:
 	void moveWest();
 	void displayLocation();
 	void duel(Player *, Enemy *);
+	void playerOptions();
+	void moveChoice();
 	Enemy * generateEnemy();
 public:
 	Game();

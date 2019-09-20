@@ -139,7 +139,7 @@ Plaguelands::~Plaguelands() {}
 Stranglethorn::Stranglethorn() 
 {
 	this->name = "Stranglethorn Vale";
-	this->description = "A coastal jungle, full of dangerous tribes";
+	this->description = "A coastal jungle full of dangerous tribes";
 }
 
 Stranglethorn::~Stranglethorn() {}
