@@ -19,6 +19,9 @@ Location.o: Location.cpp
 Player.o: Player.cpp
 	g++ -c Player.cpp
 
+validation.o: validation.cpp
+	g++ -c validation.cpp
+
 clean:
 	rm *.o RPG
 

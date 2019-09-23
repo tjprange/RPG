@@ -116,15 +116,34 @@ void Game::playerOptions()
 	userChoice = validation(3);
 	switch (userChoice)
 	{
-	case 1: 
+	case 1: investigate();
 		break;
 	case 2: moveChoice();
 		break;
-	case 3:
+	case 3: // use item from inventory
 		break;
 	}
 }
 
+/* This function will randomly generate an enemy to duel, find an item for use or nothing happens */
+void Game::investigate()
+{
+	int randomNum = rand() % 3 + 1;
+
+	switch (randomNum)
+	{
+	case 1: generateEnemy(); // case 1 will generate an enempy and then use player and enemy pointers in duel() function call
+		duel(player, enemy);
+		break;
+	case 2: cout << "Print stub for obtain an item" << endl; // case 2 player finds an item and adds it to inventory
+		break;
+	case 3: cout << "nothing happens" << endl;
+		break;
+	}
+}
+
+/* This function will print a menu of options for the user to move. The input selection is validated and if valid will call the appropriate function
+to move to the current location pointer.*/
 void Game::moveChoice()
 {
 	cout << "\nEnter a choice to move: " << endl;
@@ -178,6 +197,8 @@ Enemy* Game::generateEnemy()
 	case 10: enemy = new Basilisk;
 		break;
 	}
+	cout << "You encounter an " << enemy->getName() << "!" << endl;
+
 	return enemy;
 }
 

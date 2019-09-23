@@ -31,6 +31,7 @@ private:
 	Location *current;
 	Enemy *enemy;
 	Player *player;
+	void investigate();
 	void gameOperations();
 	void moveNorth();
 	void moveEast();
